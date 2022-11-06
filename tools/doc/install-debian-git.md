@@ -2,7 +2,7 @@
 ### Dependencies
 
     sudo apt update
-    sudo apt install make libssl-dev libghc-zlib-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip
+    sudo apt install -y make libssl-dev libghc-zlib-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip
 
 ### Head to the [official Git website](https://github.com/git/git) and download the latest clean branch
 
