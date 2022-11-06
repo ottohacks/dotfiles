@@ -2,12 +2,15 @@
 set -e
 
 declare -a pkgs=(
+    "apt"
+    "autojump"
     "curl"
     "lynis"
     "ncat"
     "nmap"
     "p7zip-full"
     "pwgen"
+    "sudo"
     "tmux"
     "tree"
     "vim"
@@ -19,7 +22,8 @@ declare -a pkgs=(
     # "python3"
 )
 
+apt-get update
 list=$(for pkg in "${pkgs[@]}"; do echo "${pkg}"; done)
 echo "[*]" ${list}
-sudo apt install -y ${list}
+apt-get install -y ${list}
 echo "[*]" ${list}
