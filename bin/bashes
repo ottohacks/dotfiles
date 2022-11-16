@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo $SHLVL
+echo "$SHLVL-1" | bc

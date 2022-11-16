@@ -4,6 +4,7 @@ set -e
 declare -a pkgs=(
     "apt"
     "autojump"
+    "bc"
     "curl"
     "lynis"
     "ncat"
