@@ -29,7 +29,6 @@ alias grcommit='git commit -m "Auto: $(xkcdpass -d "" -C first -n 3)"'
 alias czc='cz c'
 
 alias base64='base64 -w 0'
-alias bashes='echo $SHLVL'
 alias pipi='python3 -m pip install'
 alias uniqu='awk '"'"'!x[$0]++'"'"
 alias xclip='xclip -sel clip'
