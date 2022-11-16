@@ -1,0 +1,31 @@
+#!/bin/bash
+set -e
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+[[ $# -ne 1 ]] && echo "Usage: $0 <dest path>" && exit
+mkdir -p $1
+cd $1
+
+[[ -d ".git" ]] && echo "Git project found. Aborting..." && exit
+git init
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+echo '__pycache__/' >> .gitignore
+echo '.vscode/' >> .gitignore
+sort -u -o .gitignore .gitignore
+
+cat <<EOF >.cz.json
+{
+  "commitizen": {
+    "name": "cz_conventional_commits",
+    "version": "0.0.1",
+    "tag_format": "$version",
+    "update_changelog_on_bump": true,
+    "changelog_incremental": true
+  }
+}
+EOF
+
+git add -A && git commit -m 'build: project start'

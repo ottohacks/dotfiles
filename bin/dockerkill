@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo '[*] Stopping containers...'
+docker stop $(docker ps -aq) 2>/dev/null
+
+echo '[*] Killing containers...'
+docker rm $(docker ps -aq) 2>/dev/null
+
+echo '[*] Killing networks...'
+docker network rm $(docker network ls -q) 2>/dev/null
+
+echo '[*] Killing volumes...'
+docker volume rm $(docker volume ls -q) 2>/dev/null
