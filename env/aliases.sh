@@ -29,6 +29,7 @@ alias less='less -r'
 
 alias gadd='git add -A'
 alias grcommit='git commit -m "Auto: $(xkcdpass -d "" -C first -n 3)"'
+alias ggg='gadd && grcommit'
 alias czc='cz c'
 
 alias base64='base64 -w 0'
